@@ -15,5 +15,6 @@ COPY --from=build /app/dist /app
 COPY --from=build /deps-prod /app/node_modules
 
 ENV API_PREFIX /api
+EXPOSE 80
 
 ENTRYPOINT [ "node", "main.js" ]
